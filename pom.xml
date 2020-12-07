@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.iotat</groupId>
+    <name>iotat-dependencies</name>
+    <artifactId>iotat-dependencies</artifactId>
+    <version>0.0.1</version>
+    <description>物联网应用技术创新实践班软件开发依賴</description>
+    <packaging>pom</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <name>Aliyun Release Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2056133-release-JQz3KY/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <name>Aliyun Snapshot Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2056133-snapshot-BkVKVj/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <alibaba-cloud.version>2.2.3.RELEASE</alibaba-cloud.version>
+        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <mybatis-spring-boot-starter.version>2.1.2</mybatis-spring-boot-starter.version>
+        <spring-cloud-starter-zipkin.version>2.2.6.RELEASE</spring-cloud-starter-zipkin.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${spring-cloud-starter-zipkin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
